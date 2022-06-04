@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.column {
+    float: left;
+    padding: 10px;
+}
+
+/* Cột bên trái và phải */
+.column.side {
+    width: 25%;
+}
+
+/* Cột chính giữa */
+.column.middle {
+    width: 50%;
+}
+
+/* Clear float khác sau các cột */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 600px) {
+
+    .column.side,
+    .column.middle {
+        width: 100%;
+    }
+}
+
+.clock {
+
+    position: relative;
+    margin: 0 auto;
+
+    /* Size should match the parent container */
+    width: 300px;
+    height: 100px;
+    background-color: black;
+
+    /* Keep the label aligned to the top */
+    top: 0;
+
+    /* Create a flexible box that centers content vertically and horizontally */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Sort of an arbitrary number; adjust to your liking */
+    font-family: 'Orbitron', sans-serif;
+    font-size: 48px;
+    color: red;
+}
+
+.time-start {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+    width: 100px;
+}
+
+.time-stop {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+    width: 100px;
+}
+
+.time-reset {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+    width: 100px;
+}
+
+.home-score {
+    position: relative;
+
+    /* Size should match the parent container */
+    width: 300px;
+    height: 300px;
+    background-color: black;
+
+    margin-top: 10px;
+
+    /* Create a flexible box that centers content vertically and horizontally */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Orbitron', sans-serif;
+    font-size: 150px;
+    color: red;
+}
+
+.add-hscore-btn {
+    margin-top: 10px;
+}
+
+.minus-hscore-btn {
+    margin-top: 10px;
+}
+
+.add-btn {
+    padding: 10px;
+}
+
+.away-score {
+    position: relative;
+
+    /* Size should match the parent container */
+    width: 300px;
+    height: 300px;
+    background-color: black;
+
+    margin-top: 10px;
+
+    /* Create a flexible box that centers content vertically and horizontally */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Orbitron', sans-serif;
+    font-size: 150px;
+    color: red;
+}

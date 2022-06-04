@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class = "row">
+        <div class="column side">
+            <div class="home-score">
+                <p id="home-score"></p>
+            </div>
+            <div class="add-hscore-btn">
+                <button onclick="addHomeScore(1)" class="add-btn">+1 PTS</button>
+                <button onclick="addHomeScore(2)" class="add-btn">+2 PTS</button>
+                <button onclick="addHomeScore(3)" class="add-btn">+3 PTS</button>
+            </div>
+            <div class="minus-hscore-btn">
+                <button onclick="minusHomeScore(1)" class="add-btn">- 1 PTS</button>
+                <button onclick="minusHomeScore(2)" class="add-btn">- 2 PTS</button>
+                <button onclick="minusHomeScore(3)" class="add-btn">- 3 PTS</button>
+            </div>
+        </div>
+
+        <div class="column middle">
+            <div class="clock">
+                <p id="clock-time"></p>
+            </div>
+            <button onclick="startClock()" class="time-start">Start Clock</button>
+            <button onclick="stopClock()" class="time-stop">Stop Clock</button>
+            <button onclick="resetClock()" class="time-reset">Reset Clock</button>
+        </div>
+
+        <div class="column side">
+            <div class="away-score">
+                <p id="away-score"></p>
+            </div>
+            <div class="add-hscore-btn">
+                <button onclick="addAwayScore(1)" class="add-btn">+1 PTS</button>
+                <button onclick="addAwayScore(2)" class="add-btn">+2 PTS</button>
+                <button onclick="addAwayScore(3)" class="add-btn">+3 PTS</button>
+            </div>
+            <div class="minus-hscore-btn">
+                <button onclick="minusAwayScore(1)" class="add-btn">- 1 PTS</button>
+                <button onclick="minusAwayScore(2)" class="add-btn">- 2 PTS</button>
+                <button onclick="minusAwayScore(3)" class="add-btn">- 3 PTS</button>
+            </div>
+            <div class="reset"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
