@@ -30,3 +30,8 @@ AUTOMATIC CONTROL:
 
 # TODO:
 - Make a countdown clock 
+- Make a short clock
+- Two team' scores
+- Relative buttons
+- Timeout and Fouls (Bounus)
+

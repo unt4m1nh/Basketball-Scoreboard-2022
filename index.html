@@ -1,15 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <link href='https://css.gg/arrow-left-r.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </head>
-<body>
-    <div class = "row">
+
+<bodY onload="start()">
+    <div class="row">
         <div class="column side">
             <div class="home-score">
                 <p id="home-score"></p>
+            </div>
+            <div class="timeout">
+                <p>TIMEOUT:</p>
+                &ensp;
+                <P id="home-timeout"></p>
+            </div>
+            <div class="fouls">
+                <p>FOULS: </p>
+                &ensp;
+                <p id="home-fouls"></p>
+                <p class="home-bonus" id="home-bonus"></p>
             </div>
             <div class="add-hscore-btn">
                 <button onclick="addHomeScore(1)" class="add-btn">+1 PTS</button>
@@ -21,20 +41,62 @@
                 <button onclick="minusHomeScore(2)" class="add-btn">- 2 PTS</button>
                 <button onclick="minusHomeScore(3)" class="add-btn">- 3 PTS</button>
             </div>
+            <div class="home-fouls-btn">
+                <p>FOULS: </p>
+                &ensp;
+                <button onclick="changeFouls(0,1)" class="add-fouls">+</button>
+                <button onclick="changeFouls(0,-1)" class="minus-fouls"> - </button>
+            </div>
+            <div class="home-timeout-btn">
+                <p>TIMEOUT: </p>
+                &ensp;
+                <button onclick="changeTimeout(0,1)" class="add-timeout">+</button>
+                <button onclick="changeTimeout(0,-1)" class="minus-timeout"> - </button>
+            </div>
         </div>
 
         <div class="column middle">
             <div class="clock">
                 <p id="clock-time"></p>
             </div>
-            <button onclick="startClock()" class="time-start">Start Clock</button>
+            <div class="short-clock">
+                <p id="short-clock"></p>
+            </div>
+            <button onclick="startClock(), startShortClock()" class="time-start">Start Clock</button>
             <button onclick="stopClock()" class="time-stop">Stop Clock</button>
             <button onclick="resetClock()" class="time-reset">Reset Clock</button>
+            <div class="add-time-btn">
+                <button onclick="addTime(1)" class="add-btn">+1sec</button>
+                <button onclick="addTime(10)" class="add-btn">+10secs</button>
+                <button onclick="addTime(60)" class="add-btn">+60secs</button>
+            </div>
+            <div class="minus-time-btn">
+                <button onclick="minusTime(1)" class="add-btn">- 1sec</button>
+                <button onclick="minusTime(10)" class="add-btn">- 10secs</button>
+                <button onclick="minusTime(60)" class="add-btn">- 60secs</button>
+            </div>
+            <div class="possesion">
+                <button onclick="setPossesion(0)" id="home-pos-btn" class="home-pos-btn"></button>
+                <p class="pos">POSSESION</p>
+                <button onclick="setPossesion(1)" id="away-pos-btn" class="away-pos-btn"></button>
+            </div>
+            <button onclick="addAtkTime()" class="add-atk-time">+ ATK Time</button>
         </div>
 
         <div class="column side">
             <div class="away-score">
                 <p id="away-score"></p>
+            </div>
+            <div class="timeout">
+                <p>TIMEOUT:</p>
+                &ensp;
+                <P id="away-timeout"></p>
+            </div>
+            <div class="fouls">
+                <p>FOULS: </p>
+                &ensp;
+                <p id="away-fouls"></p>
+                <p class="away-bonus" id="away-bonus"></p>
             </div>
             <div class="add-hscore-btn">
                 <button onclick="addAwayScore(1)" class="add-btn">+1 PTS</button>
@@ -46,10 +108,22 @@
                 <button onclick="minusAwayScore(2)" class="add-btn">- 2 PTS</button>
                 <button onclick="minusAwayScore(3)" class="add-btn">- 3 PTS</button>
             </div>
-            <div class="reset"></div>
+            <div class="away-fouls-btn">
+                <p>FOULS: </p>
+                &ensp;
+                <button onclick="changeFouls(1,1)" class="add-fouls">+</button>
+                <button onclick="changeFouls(1,-1)" class="minus-fouls"> - </button>
+            </div>
+            <div class="away-timeout-btn">
+                <p>TIMEOUT: </p>
+                &ensp;
+                <button onclick="changeTimeout(1,1)" class="add-timeout">+</button>
+                <button onclick="changeTimeout(1,-1)" class="minus-timeout"> - </button>
+            </div>
         </div>
     </div>
+    <button onclick="resetScore()" class="reset-score-btn">Reset Score</button>
     <script src="script.js"></script>
 </body>
-</html>
 
+</html>
