@@ -28,10 +28,7 @@ AUTOMATIC CONTROL:
  - Reset fouls every time the clock went down to 0:00
  - Buzzing sound when clock or short clock went down to 0 
 
-# TODO:
-- Make a countdown clock 
-- Make a short clock
-- Two team' scores
-- Relative buttons
-- Timeout and Fouls (Bounus)
+# TODO: Decore our scoreboard 
+- Layout 
+- Buttons
 

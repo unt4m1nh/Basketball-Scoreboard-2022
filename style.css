@@ -10,12 +10,17 @@ body {
 }
 
 .column {
-    float: left;
+    float: right;
     padding: 10px;
 }
 
-/* Cột bên trái và phải */
-.column.side {
+/* Cột bên phải */
+.column.right {
+    width: 25%;
+}
+
+/* Cột bên trái */
+.column.left {
     width: 25%;
 }
 
@@ -162,6 +167,7 @@ body {
     width: 300px;
     height: 300px;
     background-color: black;
+    border: 2px solid white;
 
     margin-top: 10px;
 
@@ -183,19 +189,31 @@ body {
     margin-top: 10px;
 }
 
+.add-ascore-btn {
+    float: inherit;
+    margin-top: 10px;
+}
+
+.minus-ascore-btn {
+    float: inherit;
+    margin-top: 10px;
+}
+
 .add-btn {
     padding: 10px;
 }
 
 .away-score {
     position: relative;
+    margin-top: 10px;
+    float: right;
 
     /* Size should match the parent container */
     width: 300px;
     height: 300px;
     background-color: black;
+    border: 2px solid white;
 
-    margin-top: 10px;
 
     /* Create a flexible box that centers content vertically and horizontally */
     display: flex;
@@ -221,18 +239,20 @@ body {
 
 .away-fouls-btn {
     display: flex;
+    float: right;
     align-items: center;
     padding-left: 10px;
 }
 
 .away-timeout-btn {
+    float: right;
     display: flex;
     align-items: center;
     padding-left: 10px;
 }
 
 .add-fouls {
-    margin-left: 10px;
+    margin-left: 30px;
     padding-left: 10px;
     width: 50px;
 }
@@ -255,7 +275,7 @@ body {
     width: 50px;
 }
 
-.timeout {
+.htimeout {
     position: relative;
     display: flex;
     padding-left: 30px;
@@ -270,9 +290,43 @@ body {
     font-size: 20px;
 }
 
-.fouls {
+.atimeout {
     position: relative;
     display: flex;
+    float: right;
+    padding-left: 30px;
+
+    width: 300px;
+    height: 50px;
+
+    background-color: gray;
+    color: white;
+
+    font-family:  'Fjalla One', sans-serif;
+    font-size: 20px;
+}
+
+
+
+.hfouls {
+    position: relative;
+    display: flex;
+    padding-left: 30px;
+
+    width: 300px;
+    height: 50px;
+
+    background-color: gray;
+    color: white;
+
+    font-family:  'Fjalla One', sans-serif;
+    font-size: 20px;
+}
+
+.afouls {
+    position: relative;
+    display: flex;
+    float: inherit;
     padding-left: 30px;
 
     width: 300px;

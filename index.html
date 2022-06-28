@@ -14,18 +14,18 @@
         crossorigin="anonymous"></script>
 </head>
 
-<bodY onload="start()">
+<bodY onload="start()" style="background-color: #659dbd;">
     <div class="row">
-        <div class="column side">
+        <div class="column left">
             <div class="home-score">
                 <p id="home-score"></p>
             </div>
-            <div class="timeout">
+            <div class="htimeout">
                 <p>TIMEOUT:</p>
                 &ensp;
                 <P id="home-timeout"></p>
             </div>
-            <div class="fouls">
+            <div class="hfouls">
                 <p>FOULS: </p>
                 &ensp;
                 <p id="home-fouls"></p>
@@ -83,27 +83,27 @@
             <button onclick="addAtkTime()" class="add-atk-time">+ ATK Time</button>
         </div>
 
-        <div class="column side">
+        <div class="column right">
             <div class="away-score">
                 <p id="away-score"></p>
             </div>
-            <div class="timeout">
+            <div class="atimeout">
                 <p>TIMEOUT:</p>
                 &ensp;
                 <P id="away-timeout"></p>
             </div>
-            <div class="fouls">
+            <div class="afouls">
                 <p>FOULS: </p>
                 &ensp;
                 <p id="away-fouls"></p>
                 <p class="away-bonus" id="away-bonus"></p>
             </div>
-            <div class="add-hscore-btn">
+            <div class="add-ascore-btn">
                 <button onclick="addAwayScore(1)" class="add-btn">+1 PTS</button>
                 <button onclick="addAwayScore(2)" class="add-btn">+2 PTS</button>
                 <button onclick="addAwayScore(3)" class="add-btn">+3 PTS</button>
             </div>
-            <div class="minus-hscore-btn">
+            <div class="minus-ascore-btn">
                 <button onclick="minusAwayScore(1)" class="add-btn">- 1 PTS</button>
                 <button onclick="minusAwayScore(2)" class="add-btn">- 2 PTS</button>
                 <button onclick="minusAwayScore(3)" class="add-btn">- 3 PTS</button>
