@@ -9,6 +9,17 @@ body {
     margin: 0;
 }
 
+.header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background-color:  #28282B ;
+    color: white;
+    height: 100px;
+}
+
 .column {
     float: right;
     padding: 10px;
@@ -52,7 +63,8 @@ body {
     /* Size should match the parent container */
     width: 300px;
     height: 100px;
-    background-color: black;
+    background-color:  #28282b;
+    border: 2px solid white;
 
     /* Keep the label aligned to the top */
     top: 0;
@@ -74,7 +86,8 @@ body {
 
     width: 100px;
     height: 100px;
-    background-color: black;
+    background-color:  #28282B ;
+    border: 2px solid white;
 
     /* Create a flexible box that centers content vertically and horizontally */
     display: flex;
@@ -149,16 +162,211 @@ body {
 }
 
 .home-pos-btn {
-    display: block;
     background-color: white;
     width: 100px;
 }
 
 .away-pos-btn {
-    display: block;
     background-color: white;
     width: 100px;
 }
+
+
+
+/* CSS */
+.button-1 {
+  background-color: #036ffc;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: flex;
+  font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 10px auto;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-1:hover{
+  background-color: #039ffc;
+}
+
+/* CSS */
+.button-3 {
+  appearance: none;
+  background-color: #ffa500;
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.button-3:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+
+.button-3:hover {
+  background-color: #ff5733;
+}
+
+.button-3:focus {
+  box-shadow: rgb(255,87,51) 0 0 0 3px;
+  outline: none;
+}
+
+.button-3:disabled {
+  background-color: #94d3a2;
+  border-color: rgba(27, 31, 35, .1);
+  color: rgba(255, 255, 255, .8);
+  cursor: default;
+}
+
+.button-3:active {
+  background-color: #FF9033;
+  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+
+.button-4 {
+    appearance: none;
+    background-color: #ffa500;
+    border: 1px solid rgba(27, 31, 35, .15);
+    border-radius: 6px;
+    box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    margin-left: 5px;
+    padding-left: 5px;
+    width: 70px;
+    height: 30px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+  
+  .button-4:focus:not(:focus-visible):not(.focus-visible) {
+    box-shadow: none;
+    outline: none;
+  }
+  
+  .button-4:hover {
+    background-color: #ff5733;
+  }
+  
+  .button-4:focus {
+    box-shadow: rgb(255,87,51) 0 0 0 3px;
+    outline: none;
+  }
+  
+  .button-4:disabled {
+    background-color: #94d3a2;
+    border-color: rgba(27, 31, 35, .1);
+    color: rgba(255, 255, 255, .8);
+    cursor: default;
+  }
+  
+  .button-4:active {
+    background-color: #FF9033;
+    box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+  }
+
+  .button-4-1 {
+    appearance: none;
+    background-color: #ffa500;
+    border: 1px solid rgba(27, 31, 35, .15);
+    border-radius: 6px;
+    box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    margin-left: 25px;
+    padding-left: 5px;
+    width: 70px;
+    height: 30px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+  
+  .button-4-1:focus:not(:focus-visible):not(.focus-visible) {
+    box-shadow: none;
+    outline: none;
+  }
+  
+  .button-4-1:hover {
+    background-color: #ff5733;
+  }
+  
+  .button-4-1:focus {
+    box-shadow: rgb(255,87,51) 0 0 0 3px;
+    outline: none;
+  }
+  
+  .button-4-1:disabled {
+    background-color: #94d3a2;
+    border-color: rgba(27, 31, 35, .1);
+    color: rgba(255, 255, 255, .8);
+    cursor: default;
+  }
+  
+  .button-4-1:active {
+    background-color: #FF9033;
+    box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+  }
+
+  
+
 
 .home-score {
     position: relative;
@@ -166,7 +374,7 @@ body {
     /* Size should match the parent container */
     width: 300px;
     height: 300px;
-    background-color: black;
+    background-color:  #28282B;
     border: 2px solid white;
 
     margin-top: 10px;
@@ -199,10 +407,6 @@ body {
     margin-top: 10px;
 }
 
-.add-btn {
-    padding: 10px;
-}
-
 .away-score {
     position: relative;
     margin-top: 10px;
@@ -211,7 +415,7 @@ body {
     /* Size should match the parent container */
     width: 300px;
     height: 300px;
-    background-color: black;
+    background-color:  #28282B;
     border: 2px solid white;
 
 
@@ -229,12 +433,18 @@ body {
     display: flex;
     align-items: center;
     padding-left: 10px;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
 }
 
 .home-timeout-btn {
     display: flex;
     align-items: center;
     padding-left: 10px;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;    
 }
 
 .away-fouls-btn {
@@ -242,20 +452,22 @@ body {
     float: right;
     align-items: center;
     padding-left: 10px;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
 }
 
 .away-timeout-btn {
-    float: right;
     display: flex;
+    float: right;
     align-items: center;
     padding-left: 10px;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
 }
 
-.add-fouls {
-    margin-left: 30px;
-    padding-left: 10px;
-    width: 50px;
-}
+
 
 .minus-fouls {
     margin-left: 10px;
@@ -356,35 +568,38 @@ body {
     justify-content: center;
 }
 
-.gg-arrow-left-r {
-    box-sizing: border-box;
-    position: relative;
-    display: block;
-    width: 100px;
-    height: 100px;
-    border: 2px solid;
-    transform: scale(var(--ggs,1));
-    border-radius: 4px
-}
-.gg-arrow-left-r::after,
-.gg-arrow-left-r::before {
-    content: "";
-    display: block;
-    box-sizing: border-box;
-    position: absolute;
-    left: 4px
-}
-.gg-arrow-left-r::after {
-    width: 6px;
-    height: 6px;
-    border-bottom: 2px solid;
-    border-left: 2px solid;
-    transform: rotate(45deg);
-    bottom: 6px
-}
-.gg-arrow-left-r::before {
-    width: 10px;
-    height: 2px;
-    bottom: 8px;
-    background: red;
-}
+.footer-basic {
+    padding:40px 0;
+    background-color: #28282B;
+    color:white;
+  }
+  
+  .footer-basic .social {
+    text-align:center;
+    padding-bottom:25px;
+  }
+  
+  .footer-basic .social > a {
+    font-size:24px;
+    width:50px;
+    height:50px;
+    line-height:40px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    border:5px solid white;
+    margin:0 8px;
+    color:inherit;
+    opacity:0.75;
+  }
+  
+  .footer-basic .social > a:hover {
+    opacity:0.9;
+  }
+  
+  .footer-basic .copyright {
+    text-align:center;
+    font-size:13px;
+    color:#aaa;
+    margin-bottom:0;
+  }

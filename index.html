@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <link href='https://css.gg/arrow-left-r.css' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -15,6 +17,9 @@
 </head>
 
 <bodY onload="start()" style="background-color: #659dbd;">
+    <header class="header">
+        <h1>ONLINE BASKETBALL SCOREBOARD</h1>
+    </header>
     <div class="row">
         <div class="column left">
             <div class="home-score">
@@ -32,26 +37,26 @@
                 <p class="home-bonus" id="home-bonus"></p>
             </div>
             <div class="add-hscore-btn">
-                <button onclick="addHomeScore(1)" class="add-btn">+1 PTS</button>
-                <button onclick="addHomeScore(2)" class="add-btn">+2 PTS</button>
-                <button onclick="addHomeScore(3)" class="add-btn">+3 PTS</button>
+                <button onclick="addHomeScore(1)" class="button-3">+1 PTS</button>
+                <button onclick="addHomeScore(2)" class="button-3">+2 PTS</button>
+                <button onclick="addHomeScore(3)" class="button-3">+3 PTS</button>
             </div>
             <div class="minus-hscore-btn">
-                <button onclick="minusHomeScore(1)" class="add-btn">- 1 PTS</button>
-                <button onclick="minusHomeScore(2)" class="add-btn">- 2 PTS</button>
-                <button onclick="minusHomeScore(3)" class="add-btn">- 3 PTS</button>
+                <button onclick="minusHomeScore(1)" class="button-3">- 1 PTS</button>
+                <button onclick="minusHomeScore(2)" class="button-3">- 2 PTS</button>
+                <button onclick="minusHomeScore(3)" class="button-3">- 3 PTS</button>
             </div>
             <div class="home-fouls-btn">
                 <p>FOULS: </p>
                 &ensp;
-                <button onclick="changeFouls(0,1)" class="add-fouls">+</button>
-                <button onclick="changeFouls(0,-1)" class="minus-fouls"> - </button>
+                <button onclick="changeFouls(0,1)" class="button-4-1">+</button>
+                <button onclick="changeFouls(0,-1)" class="button-4"> - </button>
             </div>
             <div class="home-timeout-btn">
                 <p>TIMEOUT: </p>
                 &ensp;
-                <button onclick="changeTimeout(0,1)" class="add-timeout">+</button>
-                <button onclick="changeTimeout(0,-1)" class="minus-timeout"> - </button>
+                <button onclick="changeTimeout(0,1)" class="button-4">+</button>
+                <button onclick="changeTimeout(0,-1)" class="button-4"> - </button>
             </div>
         </div>
 
@@ -62,25 +67,25 @@
             <div class="short-clock">
                 <p id="short-clock"></p>
             </div>
-            <button onclick="startClock(), startShortClock()" class="time-start">Start Clock</button>
-            <button onclick="stopClock()" class="time-stop">Stop Clock</button>
-            <button onclick="resetClock()" class="time-reset">Reset Clock</button>
+            <button onclick="startClock(), startShortClock()" class="button-1">Start Clock</button>
+            <button onclick="stopClock()" class="button-1">Stop Clock</button>
+            <button onclick="resetClock()" class="button-1">Reset Clock</button>
             <div class="add-time-btn">
-                <button onclick="addTime(1)" class="add-btn">+1sec</button>
-                <button onclick="addTime(10)" class="add-btn">+10secs</button>
-                <button onclick="addTime(60)" class="add-btn">+60secs</button>
+                <button onclick="addTime(1)" class="button-3">+1sec</button>
+                <button onclick="addTime(10)" class="button-3">+10secs</button>
+                <button onclick="addTime(60)" class="button-3">+60secs</button>
             </div>
             <div class="minus-time-btn">
-                <button onclick="minusTime(1)" class="add-btn">- 1sec</button>
-                <button onclick="minusTime(10)" class="add-btn">- 10secs</button>
-                <button onclick="minusTime(60)" class="add-btn">- 60secs</button>
+                <button onclick="minusTime(1)" class="button-3">- 1sec</button>
+                <button onclick="minusTime(10)" class="button-3">- 10secs</button>
+                <button onclick="minusTime(60)" class="button-3">- 60secs</button>
             </div>
             <div class="possesion">
                 <button onclick="setPossesion(0)" id="home-pos-btn" class="home-pos-btn"></button>
-                <p class="pos">POSSESION</p>
+                <p class="pos" style="color: white">POSSESION</p>
                 <button onclick="setPossesion(1)" id="away-pos-btn" class="away-pos-btn"></button>
             </div>
-            <button onclick="addAtkTime()" class="add-atk-time">+ ATK Time</button>
+            <button onclick="addAtkTime()" class="button-1">+ ATK Time</button>
         </div>
 
         <div class="column right">
@@ -99,30 +104,39 @@
                 <p class="away-bonus" id="away-bonus"></p>
             </div>
             <div class="add-ascore-btn">
-                <button onclick="addAwayScore(1)" class="add-btn">+1 PTS</button>
-                <button onclick="addAwayScore(2)" class="add-btn">+2 PTS</button>
-                <button onclick="addAwayScore(3)" class="add-btn">+3 PTS</button>
+                <button onclick="addAwayScore(1)" class="button-3">+1 PTS</button>
+                <button onclick="addAwayScore(2)" class="button-3">+2 PTS</button>
+                <button onclick="addAwayScore(3)" class="button-3">+3 PTS</button>
             </div>
             <div class="minus-ascore-btn">
-                <button onclick="minusAwayScore(1)" class="add-btn">- 1 PTS</button>
-                <button onclick="minusAwayScore(2)" class="add-btn">- 2 PTS</button>
-                <button onclick="minusAwayScore(3)" class="add-btn">- 3 PTS</button>
+                <button onclick="minusAwayScore(1)" class="button-3">- 1 PTS</button>
+                <button onclick="minusAwayScore(2)" class="button-3">- 2 PTS</button>
+                <button onclick="minusAwayScore(3)" class="button-3">- 3 PTS</button>
             </div>
             <div class="away-fouls-btn">
                 <p>FOULS: </p>
                 &ensp;
-                <button onclick="changeFouls(1,1)" class="add-fouls">+</button>
-                <button onclick="changeFouls(1,-1)" class="minus-fouls"> - </button>
+                <button onclick="changeFouls(1,1)" class="button-4-1">+</button>
+                <button onclick="changeFouls(1,-1)" class="button-4"> - </button>
             </div>
             <div class="away-timeout-btn">
                 <p>TIMEOUT: </p>
                 &ensp;
-                <button onclick="changeTimeout(1,1)" class="add-timeout">+</button>
-                <button onclick="changeTimeout(1,-1)" class="minus-timeout"> - </button>
+                <button onclick="changeTimeout(1,1)" class="button-4">+</button>
+                <button onclick="changeTimeout(1,-1)" class="button-4"> - </button>
             </div>
         </div>
     </div>
-    <button onclick="resetScore()" class="reset-score-btn">Reset Score</button>
+    <button onclick="resetScore()" class="button-1">Reset Score</button>
+    <footer class="footer-basic">
+        <div class="social">
+            <a href="#"><i class="icon ion-social-instagram"></i></a>
+            <a href="https://github.com/unt4m1nh"><i class="icon ion-social-github"></i></a>
+            <a href="https://www.linkedin.com/in/minh-hoang-03b554223/"><i class="icon ion-social-linkedin"></i></a>
+            <a href="#"><i class="icon ion-social-facebook"></i></a>
+        </div>
+        <p class="copyright">Untaminh © 2022</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 

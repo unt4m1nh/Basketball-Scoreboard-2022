@@ -31,4 +31,5 @@ AUTOMATIC CONTROL:
 # TODO: Decore our scoreboard 
 - Layout 
 - Buttons
+- Sizing
 

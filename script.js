@@ -117,10 +117,11 @@ function resetShortClock() {
 }
 
 function addAtkTime() {
-    clearInterval(shortClockInterval);
+    atkTimePassed = ATTACK_TIME - 14;
     atkTimeLeft = 14;
-    atkTimePassed = 0;
     ableToCon = true;
+    clearInterval(shortClockInterval);
+    document.getElementById("short-clock").innerHTML = formatScore(atkTimeLeft);
     startShortClock();
 }
 
@@ -211,35 +212,77 @@ function setPossesion(pos) {
 
 function changeFouls(team, change) {
     if (team == 0) {
-        homeFouls += change;
-        document.getElementById("home-fouls").innerHTML = homeFouls;
-        if (homeFouls >= 5) {
-            bonusLabel = "BONUS";
-            document.getElementById("home-bonus").innerHTML = bonusLabel;
+        if (change < 0) {
+            if (homeFouls != 0) {
+                homeFouls += change;
+                document.getElementById("home-fouls").innerHTML = homeFouls;
+                if (homeFouls >= 5) {
+                    bonusLabel = "BONUS";
+                    document.getElementById("home-bonus").innerHTML = bonusLabel;
+                } else {
+                    bonusLabel = "";
+                    document.getElementById("home-bonus").innerHTML = bonusLabel;
+                }
+            }
         } else {
-            bonusLabel = "";
-            document.getElementById("home-bonus").innerHTML = bonusLabel;
+            homeFouls += change;
+            document.getElementById("home-fouls").innerHTML = homeFouls;
+            if (homeFouls >= 5) {
+                bonusLabel = "BONUS";
+                document.getElementById("home-bonus").innerHTML = bonusLabel;
+            } else {
+                bonusLabel = "";
+                document.getElementById("home-bonus").innerHTML = bonusLabel;
+            }
         }
     } else {
-        awayFouls += change;
-        document.getElementById("away-fouls").innerHTML = awayFouls;
-        if (awayFouls >= 5) {
-            bonusLabel = "BONUS";
-            document.getElementById("away-bonus").innerHTML = bonusLabel;
+        if (change < 0) {
+            if (awayFouls != 0) {
+                awayFouls += change;
+                document.getElementById("away-fouls").innerHTML = awayFouls;
+                if (awayFouls >= 5) {
+                    bonusLabel = "BONUS";
+                    document.getElementById("away-bonus").innerHTML = bonusLabel;
+                } else {
+                    bonusLabel = "";
+                    document.getElementById("away-bonus").innerHTML = bonusLabel;
+                }
+            }
         } else {
-            bonusLabel = "";
-            document.getElementById("away-bonus").innerHTML = bonusLabel;
+            awayFouls += change;
+            document.getElementById("away-fouls").innerHTML = awayFouls;
+            if (awayFouls >= 5) {
+                bonusLabel = "BONUS";
+                document.getElementById("away-bonus").innerHTML = bonusLabel;
+            } else {
+                bonusLabel = "";
+                document.getElementById("away-bonus").innerHTML = bonusLabel;
+            }
         }
     }
 }
 
 function changeTimeout(team, change) {
-    if (team == 0) {
-        homeTimeout += change;
-        document.getElementById("home-timeout").innerHTML = homeTimeout;
+    if (change < 0) {
+        if (team == 0) {
+            if (homeTimeout != 0) {
+                homeTimeout += change;
+                document.getElementById("home-timeout").innerHTML = homeTimeout;
+            }
+        } else {
+            if (awayTimeout != 0) {
+                awayTimeout += change;
+                document.getElementById("away-timeout").innerHTML = awayTimeout;
+            }
+        }
     } else {
-        awayTimeout += change;
-        document.getElementById("away-timeout").innerHTML = awayTimeout;
+        if (team == 0) {
+            homeTimeout += change;
+            document.getElementById("home-timeout").innerHTML = homeTimeout;
+        } else {
+            awayTimeout += change;
+            document.getElementById("away-timeout").innerHTML = awayTimeout;
+        }
     }
 }
 
