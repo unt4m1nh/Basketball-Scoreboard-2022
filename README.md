@@ -28,8 +28,3 @@ AUTOMATIC CONTROL:
  - Reset fouls every time the clock went down to 0:00
  - Buzzing sound when clock or short clock went down to 0 
 
-# TODO: Decore our scoreboard 
-- Layout 
-- Buttons
-- Sizing
-
